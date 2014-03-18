@@ -58,7 +58,13 @@ int main(int argc, const char * argv[])
     ifstream fin("/Users/WhiteHaven/Documents/CS Projects/Happy-Password-C++/Happy Password/US.txt");
     ofstream rightfout("/Users/WhiteHaven/Documents/CS Projects/Happy-Password-C++/Happy Password/right.txt");
     ofstream leftfout("/Users/WhiteHaven/Documents/CS Projects/Happy-Password-C++/Happy Password/left.txt");
-    
+    if(!fin.is_open())
+	{
+		cout << "File open failed." << endl;
+		return -1;
+	}
+	
+	
     string word;
     while (!fin.eof())
     {
@@ -87,4 +93,5 @@ int main(int argc, const char * argv[])
     cout << "Right-Handed Words:\t\t" << rights << "\t\t    " << (double)rights/(double)words*100 << "%" << endl;
     cout << "Both-Handed Words: \t\t" << words-(lefts+rights) << "\t\t" << (double)(words-(lefts+rights))/(double)words*100 << "%" << endl;
     
+	return 0;
 }

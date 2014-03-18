@@ -28,6 +28,10 @@
 		1C10FA5218B8458B00DB4CDB /* Happy Password */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Happy Password"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C10FA5518B8458B00DB4CDB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1C10FA5718B8458B00DB4CDB /* Happy_Password.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Happy_Password.1; sourceTree = "<group>"; };
+		1CB0602D18D7BFC9008028F6 /* First 10.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = "First 10.txt"; path = "Happy Password/First 10.txt"; sourceTree = "<group>"; };
+		1CB0602E18D7BFD0008028F6 /* US.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = US.txt; path = "Happy Password/US.txt"; sourceTree = "<group>"; };
+		1CB0602F18D7E92E008028F6 /* left.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = left.txt; path = "Happy Password/left.txt"; sourceTree = "<group>"; };
+		1CB0603018D7E92E008028F6 /* right.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = right.txt; path = "Happy Password/right.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,10 @@
 			children = (
 				1C10FA5418B8458B00DB4CDB /* Happy Password */,
 				1C10FA5318B8458B00DB4CDB /* Products */,
+				1CB0602D18D7BFC9008028F6 /* First 10.txt */,
+				1CB0602E18D7BFD0008028F6 /* US.txt */,
+				1CB0602F18D7E92E008028F6 /* left.txt */,
+				1CB0603018D7E92E008028F6 /* right.txt */,
 			);
 			sourceTree = "<group>";
 		};
@@ -202,6 +210,7 @@
 		1C10FA5D18B8458B00DB4CDB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CURRENT_PROJECT_VERSION = 1.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -225,6 +234,7 @@
 				1C10FA5D18B8458B00DB4CDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
