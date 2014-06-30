@@ -55,9 +55,10 @@ int main(int argc, const char * argv[])
     int lefts = 0;
     int rights = 0;
     
-    ifstream fin("/Users/WhiteHaven/Documents/CS Projects/Happy-Password-C++/Happy Password/US.txt");
-    ofstream rightfout("/Users/WhiteHaven/Documents/CS Projects/Happy-Password-C++/Happy Password/right.txt");
-    ofstream leftfout("/Users/WhiteHaven/Documents/CS Projects/Happy-Password-C++/Happy Password/left.txt");
+    ifstream fin( argv[1] );
+    ofstream rightfout( argv[2] );
+    ofstream leftfout( argv[3] );
+    
     if(!fin.is_open())
 	{
 		cout << "File open failed." << endl;
@@ -66,9 +67,8 @@ int main(int argc, const char * argv[])
 	
 	
     string word;
-    while (!fin.eof())
+    while (fin >> word)
     {
-        fin >> word;
         if( word.length() > MAX || word.length() < MIN) //if too short or too long, continue to next word
             continue;
         
