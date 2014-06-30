@@ -48,6 +48,13 @@ bool IsRight(string testword, int index)
 
 int main(int argc, const char * argv[])
 {
+	if ( !(strncmp( argv[1], "-h", 2) ))
+	{
+		cout << endl;
+		cout << "HappyPassword [dictionary] [name for right] [name for left]" << endl << endl;
+		cout << "Copyright WH 2014 v3.1" << endl;
+		return 0;
+	}
     const int MAX = 50;
     const int MIN = 5;
     
@@ -59,9 +66,10 @@ int main(int argc, const char * argv[])
     ofstream rightfout( argv[2] );
     ofstream leftfout( argv[3] );
     
-    if(!fin.is_open())
+    if( !fin.is_open() )
 	{
 		cout << "File open failed." << endl;
+		cout << "Run -h to show help." << endl;
 		return -1;
 	}
 	
@@ -86,11 +94,13 @@ int main(int argc, const char * argv[])
 
         words++;
     }
-    
-    cout << "\t\t\t\t\t\tWords\t  %Total" << endl;
-    cout << "Total Words: \t\t\t" << words << endl;
-    cout << "Left-Handed Words: \t\t" << lefts << "\t\t" << (double)lefts/(double)words*100 << "%" << endl;
-    cout << "Right-Handed Words:\t\t" << rights << "\t\t    " << (double)rights/(double)words*100 << "%" << endl;
+
+	cout << endl << "File parsed and outputted successfully." << endl;
+
+    cout << "Total Words: " << words << endl << endl;
+	cout << "Result:" << "\t\t\t\t\t\t%Total" << endl;
+    cout << "Left-Handed Words: \t\t" << lefts << "\t\t" << (double)lefts/(double)words*100 << "%" << "\t" << "(" << argv[3] << ")" << endl;
+    cout << "Right-Handed Words:\t\t" << rights << "\t\t" << (double)rights/(double)words*100 << "%" << "\t" << "(" << argv[2] << ")" << endl;
     cout << "Both-Handed Words: \t\t" << words-(lefts+rights) << "\t\t" << (double)(words-(lefts+rights))/(double)words*100 << "%" << endl;
     
 	return 0;
