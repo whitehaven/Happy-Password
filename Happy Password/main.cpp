@@ -82,13 +82,13 @@ int main(int argc, const char * argv[])
         
         else if ( IsLeft(word, 0) )
         {
-            leftfout << word << endl;
+            leftfout << word.length() << '\t' << word << endl;
             lefts++;
         }
         
         else if ( IsRight(word, 0))
         {
-            rightfout << word << endl;
+            rightfout << word.length() << '\t' << word << endl;
             rights++;
         }
 
